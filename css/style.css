@@ -28,7 +28,7 @@
 .topnav a {
    float: left;
    display: block;
-   color: #f2f2f2;
+   color: #40bad5;
    text-align: center;
    padding: 20px 46px;
    text-decoration: none;
@@ -53,47 +53,150 @@
    display: none;
 }
 
-.dropdown {
-   float: left;
-   overflow: hidden;
-
+.form-dark .font-small {
+   font-size: 0.8rem;
 }
 
-.dropdown .dropbtn {
-   font-size: 16px;
-   border: none;
-   outline: none;
-   color: white;
-   background-color: inherit;
-   font-family: inherit;
-   margin: 0;
+.form-dark [type="radio"]+label,
+.form-dark [type="checkbox"]+label {
+   font-size: 0.8rem;
 }
 
-.dropdown-content {
-   display: none;
+.form-dark [type="checkbox"]+label:before {
+   top: 2px;
+   width: 15px;
+   height: 15px;
+}
+
+.form-dark .md-form label {
+   color: #fff;
+}
+
+.form-dark input[type=email]:focus:not([readonly]) {
+   border-bottom: 1px solid #00C851;
+   -webkit-box-shadow: 0 1px 0 0 #00C851;
+   box-shadow: 0 1px 0 0 #00C851;
+}
+
+.form-dark input[type=email]:focus:not([readonly])+label {
+   color: #fff;
+}
+
+.form-dark input[type=password]:focus:not([readonly]) {
+   border-bottom: 1px solid #00C851;
+   -webkit-box-shadow: 0 1px 0 0 #00C851;
+   box-shadow: 0 1px 0 0 #00C851;
+}
+
+.form-dark input[type=password]:focus:not([readonly])+label {
+   color: #fff;
+}
+
+.form-dark input[type="checkbox"]+label:before {
+   content: '';
    position: absolute;
-   background-color: #f9f9f9;
-   min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-   z-index: 1;
+   top: 0;
+   left: 0;
+   width: 17px;
+   height: 17px;
+   z-index: 0;
+   border: 1.5px solid #fff;
+   border-radius: 1px;
+   margin-top: 2px;
+   -webkit-transition: 0.2s;
+   transition: 0.2s;
 }
 
-.dropdown-content a {
-   float: none;
-   color: black;
-   padding: 12px 16px;
-   text-decoration: none;
-   display: block;
-   text-align: left;
+.form-dark input[type="checkbox"]:checked+label:before {
+   top: -4px;
+   left: -3px;
+   width: 12px;
+   height: 22px;
+   border-style: solid;
+   border-width: 2px;
+   border-color: transparent #00c851 #00c851 transparent;
+   -webkit-transform: rotate(40deg);
+   -ms-transform: rotate(40deg);
+   transform: rotate(40deg);
+   -webkit-backface-visibility: hidden;
+   -webkit-transform-origin: 100% 100%;
+   -ms-transform-origin: 100% 100%;
+   transform-origin: 100% 100%;
 }
 
-.dropdown-content a:hover {
-   background-color: #ddd;
+.form-dark .modal-header {
+   border-bottom: none;
 }
 
-.dropdown:hover .dropdown-content {
-   display: block;
+@media screen and (max-width: 1200px) {
+   .topnav a {
+      float: left;
+      display: block;
+      color: #40bad5;
+      text-align: center;
+      padding: 10px 23px;
+      text-decoration: none;
+      font-size: 19px;
+      font-family: 'Roboto Mono',
+         monospace;
+   }
+
+   .topnav a:not(:first-child) {
+      display: none;
+   }
+
+   .topnav a.icon {
+      float: right;
+      display: block;
+   }
 }
+
+@media screen and (max-width: 600px) {
+   .topnav a {
+      float: left;
+      display: block;
+      color: #40bad5;
+      text-align: center;
+      padding: 5px 11.5px;
+      text-decoration: none;
+      font-size: 10px;
+      font-family: 'Roboto Mono',
+         monospace;
+   }
+
+   h1 {
+      color: white;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 2rem;
+   }
+
+   h2 {
+      padding-top: 2rem;
+      color: white;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1rem;
+   }
+
+}
+
+@media screen and (max-width: 700px) {
+   .topnav.responsive {
+      position: relative;
+   }
+
+   .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+   }
+
+   .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+   }
+}
+
 
 @media screen and (max-width: 700px) {
    .topnav a:not(:first-child) {
@@ -176,54 +279,10 @@ h2 {
    align-items: center;
 }
 
-@media screen and (max-width: 700px) {
 
-
-   h1 {
-      color: white;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 2rem;
-   }
-
-   .myButton {
-      background-color: #40bad5;
-      display: inline-block;
-      cursor: pointer;
-      color: #ffffff;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 24px;
-      padding: 8px 22.5px;
-      text-decoration: none;
-   }
-
-}
 
 @media screen and (max-width: 350px) {
-   h1 {
-      color: white;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 1.5rem;
-   }
 
-   h2 {
-      padding-top: 2rem;
-      color: white;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 1rem;
-   }
-
-
-
-   .welcome__title {
-      margin: 0;
-      z-index: 0;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-   }
 
    .topnav a {
       float: left;
@@ -237,23 +296,9 @@ h2 {
          monospace;
    }
 
-   .welcome__button {
-      align-items: flex-end;
-      padding-bottom: 100px;
-   }
 
-   .myButton {
 
-      z-index: 4;
-      background-color: #40bad5;
-      display: inline-block;
-      cursor: pointer;
-      color: #ffffff;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 24px;
-      padding: 8px 22.5px;
-      text-decoration: none;
-   }
+
 }
 
 #mission {
@@ -282,7 +327,7 @@ h2 {
 }
 
 .items h1 {
-   font-size: 200%;
+   font-size: 4rem;
    /* Размер шрифта */
    border-bottom: 2px solid white;
    /* Параметры линии под текстом */
@@ -290,4 +335,121 @@ h2 {
    /* Убираем жирное начертание */
    padding-bottom: 5px;
    /* Расстояние от текста до линии */
+}
+
+.items p {
+   margin-top: 30px;
+   font-size: 1.3rem;
+}
+
+#aims {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   width: 100%;
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../img/bg3.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+   justify-content: center;
+   align-items: center;
+   color: white;
+
+}
+
+.items2 h1 {
+   font-family: 'Roboto Mono',
+      monospace;
+   font-size: 4rem;
+   border-bottom: 2px solid white;
+   /* Параметры линии под текстом */
+   font-weight: normal;
+}
+
+.card {
+   margin-top: 40px;
+}
+
+#role {
+   display: flex;
+   height: 100vh;
+   width: 100%;
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../img/bg4.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.role1 {
+   margin-top: 30px;
+   width: 350px;
+   color: white;
+   text-align: center;
+
+}
+
+.role1 h1 {
+   border-bottom: 2px solid white;
+}
+
+.role2 h1 {
+   border-bottom: 2px solid white;
+}
+
+.role2 {
+   width: 350px;
+   color: white;
+   text-align: center;
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   color: white;
+   background-color: black;
+}
+
+.pic_svg img {
+   width: 200px;
+   height: 200px;
+}
+
+.animated1 {
+   animation-name: example;
+   animation-duration: 4s;
+}
+
+
+@keyframes example {
+   0% {
+      left: 0px;
+      top: 0px;
+   }
+
+   25% {
+      left: 200px;
+      top: 0px;
+   }
+
+   50% {
+      left: 200px;
+      top: 200px;
+   }
+
+   75% {
+      left: 0px;
+      top: 200px;
+   }
+
+   100% {
+      left: 0px;
+      top: 0px;
+   }
 }
